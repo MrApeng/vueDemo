@@ -1,0 +1,489 @@
+/* @import url("//unpkg.com/element-ui@2.4.11/lib/theme-chalk/index.css"); */
+
+.el-container{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.el-header{
+    text-align: center;
+    line-height: 60px;
+    /*background-color: #f25244;*/
+    background-color: #7bbcf6;
+    color: #fff;
+    font-size: 0.85rem;
+
+}
+.el-footer{
+    color: #333;
+    line-height: 1.8;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e8edf2;
+}
+.el-aside {
+    background-color: #D3DCE6;
+    color: #333;
+    text-align: center;
+    line-height: 200px;
+}
+
+.el-main {
+    /*background-color: #E9EEF3;*/
+    color: #333;
+    text-align: center;
+    /*line-height: 160px;*/
+    padding: 0.5rem;
+}
+
+body > .el-container {
+    margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+}
+
+
+/*轮播图*/
+.el-carousel{
+
+}
+
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+}
+
+.el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+}
+
+
+
+
+.slide-fade-enter-active {
+    transition: all .3s ease;
+}
+.slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.carousel_img{
+    width: 100%;
+    height: 100%;
+}
+.el-carousel__container{
+    min-height: 180px;
+    height:auto;
+}
+.el-main{
+    height:550px;
+}
+.time {
+    font-size: 13px;
+    color: #999;
+}
+
+.bottom {
+    margin-top: 13px;
+    line-height: 12px;
+}
+
+.button {
+    padding: 0;
+    float: right;
+}
+
+.image {
+    width: 100%;
+    display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both
+}
+.card_body .el-col{
+    margin-top: 10px;
+}
+.el-col-11{
+    width: 49%;
+}
+.el-col-offset-2{
+    margin-left: 0;
+}
+
+body{
+    margin: 0;
+}
+.el-badge__content.is-fixed {
+top: 10px;
+}
+
+.v-enter {
+    opacity: 0;
+    transform: translateX(100%);
+
+}
+.v-leave-to{
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.v-enter-active,
+.v-leave-active{
+    transition:  all 0.5s ease;
+}
+.el-main{
+    overflow-x: hidden;
+    border-left: 1px solid #e8edf2;
+    border-right: 1px solid #e8edf2;
+}
+.el-main >div{
+    position: relative;
+}
+.el-main div >h1{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    line-height: normal;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    text-align: center;
+
+}
+.mui-media-body{
+    text-align: left!important;
+}
+
+/*mui ui*/
+
+.mui-table-view
+{
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    background-color: #fff;
+}
+.mui-table-view:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 1px;
+
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+
+    background-color: #c8c7cc;
+}
+.mui-table-view:before
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    height: 1px;
+
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+
+    background-color: #c8c7cc;
+}
+.mui-table-view:before
+{
+    top: -1px;
+}
+.mui-table-view-cell
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 11px 15px;
+
+    -webkit-touch-callout: none;
+}
+.mui-table-view-cell:after
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 15px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+
+    background-color: #c8c7cc;
+}
+.mui-table-view-cell.mui-radio input[type=radio], .mui-table-view-cell.mui-checkbox input[type=checkbox]
+{
+    top: 8px;
+}
+.mui-table-view-cell.mui-radio.mui-left, .mui-table-view-cell.mui-checkbox.mui-left
+{
+    padding-left: 58px;
+}
+.mui-table-view-cell.mui-active
+{
+    background-color: #eee;
+}
+.mui-table-view-cell:last-child:before, .mui-table-view-cell:last-child:after
+{
+    height: 0;
+}
+.mui-table-view-cell > a:not(.mui-btn)
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: -11px -15px;
+    padding: inherit;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: inherit;
+    /*&:active {
+        background-color: #eee;
+    }*/
+}
+.mui-table-view-cell.mui-active
+{
+    background-color: #eee;
+}
+.mui-table-view-cell>a:not(.mui-btn){
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: -11px -15px;
+    padding: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+a {
+    text-decoration: none;
+    color: #007aff;
+}
+.mui-table-view .mui-media-object.mui-pull-left {
+    margin-right: 10px;
+}
+.mui-table-view .mui-media-object {
+     line-height: 42px;
+     max-width: 42px;
+     height: 42px;
+ }
+.mui-pull-left{
+    float: left;
+}
+img{
+    border: 0;
+}
+.mui-table-view .mui-media, .mui-table-view .mui-media-body{
+    overflow: hidden;
+}
+.mui-table-view-cell p{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.mui-table-view-cell p span{
+    /*color: #f25244;*/
+    color: #226aff;
+    /*font-size: 14px;*/
+
+}
+.mui-table-view-cell p span{}
+.mui-ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+p{
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #8f8f94;
+}
+
+.mui-media-body h3{
+    font-family: 'Helvetica Neue',Helvetica,sans-serif;
+    font-size: 17px;
+    line-height: 21px;
+    color: #000;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+}
+.newsinfo{
+    /*background-color: #fff;*/
+}
+.newsinfo h3{
+    margin: 0;
+    font-size: 1rem;
+}
+.newsinfo_content{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    line-height: 40px;
+    height: 30px;
+}
+.content{
+    position: relative;
+}
+.content p{
+    text-indent: 2em;
+    text-align: left;
+    font-size: 0.6rem;
+    line-height: 1.8rem;
+}
+.content p b{
+    color: #000;
+
+}
+
+.el-cmt-list{
+    position: relative;
+
+    background-color: #fff;
+}
+.el-cmt-item{
+    font-size: 0.6rem;
+    text-align: left;
+    overflow: hidden;
+
+}
+.el-cmt-title{
+    width: 100%;
+    background-color: #cccccc;
+    padding: 0 10px;
+    line-height: 1.2rem;
+
+}
+.el-card__body{
+    position: relative;
+}
+.el-cmt-body{
+
+    text-indent: 2em;
+    line-height: 0.9rem;
+
+}
+.el-row-photo{
+    /*border: 1px solid #f25244;*/
+}
+.el-info{
+    position: absolute;
+    color: white;
+    text-align: left;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.el-photo-img{
+    width: 100%;
+}
+.el-info-title{
+    font-size: 0.55rem;
+}
+.el-info-body{
+    font-size: 0.4rem;
+}
+
+/*商品列表*/
+.el-goods{
+margin-left: 10px;
+}
+.el-card__body{
+    position: relative;
+}
+.el-goods-title{
+    background-color: #fff;
+    width: 98%;
+    font-size: 0.65rem;
+    font-weight: normal;
+    text-align: left;
+    /*text-indent: 1em;*/
+    color: #000;
+    margin: 0 ;
+    padding: 1%;
+}
+.el-goodslist{
+    position: relative;
+}
+.el-goodslist h3{
+}
+.el-goodslist-body{
+    position: relative;
+    background-color: #eeeeee;
+}
+.el-goodslist-price{
+    text-align: left;
+    padding-left: 1rem;
+}
+.el-goodslist-price i{
+    font-style: normal;
+}
+.el-goodslist-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.el-goodslist-content i{
+    font-style: normal;
+    font-size: 0.55rem;
+    color: rgba(0,0,0,0.5);
+}
+.el-card__body{
+    position: relative;
+
+    border: 1px solid #cccccc;
+}
+.vue-preview{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.vue-preview figure{
+    float: left;
+    display: inline-block;
+    width: 30%;
+}
+.vue-preview figure a>img{
+    width: 100%;
+}

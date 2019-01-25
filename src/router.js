@@ -1,0 +1,27 @@
+import  VueRouter from  'vue-router'
+    // 创建路由对象
+import index from './components/tabbar/index'
+import cart from './components/tabbar/cart'
+import my from './components/tabbar/my'
+import newslist from './components/news/newslist'
+import newsinfo from './components/news/newsinfo'
+import photolist from './components/photoShare/photolist'
+import photoinfo from './components/photoShare/photoinfo'
+import goodslist from './components/goods/goodslist'
+
+var router = new VueRouter({
+    routes:[
+        {path:'/',redirect:'/index'},
+        {path:'/index',component:index},
+        {path:'/index/newslist',component:newslist},
+        {path:'/index/newslist/newsinfo:id',component:newsinfo},
+        {path:'/index/photolist/newsinfo:id',component:newsinfo},
+        {path: "/index/photolist",component: photolist},
+        {path: "/index/photoinfo/:id",component: photoinfo},
+        {path: "/index/goodslist",component: goodslist},
+        {path:'/cart',component:cart},
+        {path:'/my',component:my}
+    ]
+});
+// 暴漏路由对象
+export  default  router
