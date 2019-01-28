@@ -377,6 +377,11 @@ p{
     color: #000;
 
 }
+.content p img{
+    width: 98%;
+    float: left;
+    margin-left: 1%;
+}
 
 .el-cmt-list{
     position: relative;

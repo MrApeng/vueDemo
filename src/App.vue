@@ -21,7 +21,7 @@
           <router-link to="/cart">
             <el-col :span="8">
               <div class="grid-content bg-purple" >
-                <el-badge :value="0" class="item">
+                <el-badge :value="0" id="badge" class="item">
                   <el-button  class="hhh" icon ="el-icon-goods" >购物车</el-button>
                 </el-badge>
               </div>

@@ -1,8 +1,9 @@
 <template id="goodslist">
     <div>
         <el-row class="el-goods">
-            <el-col style="margin-bottom: 5px;margin-left: 5px" :span="11" v-for="item in goodslist" :key="item.id">
-                <el-card :body-style="{ padding: '0px' }">
+            <el-col style="margin-bottom: 5px;margin-left: 5px" :span="11" v-for="item in goodslist" :key="item.id" >
+                <router-link :to="'/index/goodslist/goodsinfo/' +item.id " tag="div"  >
+                <el-card :body-style="{ padding: '0px' }" >
                     <!--<img :src="item.img_src" class="image">-->
                     <img :src="goodsImage" class="image">
                     <div class="el-goodslist">
@@ -20,7 +21,11 @@
 
                     </div>
                 </el-card>
+                </router-link>
             </el-col>
+        </el-row>
+        <el-row>
+            <el-button type="danger" plain style="margin-top: 10px;;width:100%" @click="getMore">加载更多</el-button>
         </el-row>
     </div>
 </template>
@@ -38,10 +43,21 @@
             this.getgoodslist()
         },
         methods:{
+            getMore(){
+                this.pageIndex++;
+                this.getgoodslist()
+
+            },
+            getDetails(){
+                alert(1)
+                // this.router.push("index/gooslist/goodsinfo"+id);
+
+            },
             getgoodslist(){
                 this.$http.get('api/getgoods?pageindex'+this.pageIndex).then(result =>{
                     if (result.body.status ===0){
-                        this.goodslist = result.body.message
+                        this.goodslist = this.goodslist.concat(result.body.message)
+
                     }
                 })
             }
